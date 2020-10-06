@@ -1,10 +1,17 @@
-# test-mercadolibre-frontend
+# test-mercadolibre-backend
 
 An application for search in te API of mercadolibre
+
+**Important I have decided to work the frontend and backend separately, in a mvc model. To improve speed, interactivity and decoupling
 
 ## Project Status
 
 Developer
+
+#Stack 
+Node.js
+Express
+Axios
 
 ## Installation and Setup Instructions
 
