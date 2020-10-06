@@ -9,6 +9,9 @@ exports.itemMLibre = async function itemDataAxios(req, res) {
   );
 
   let free_shipping = JSON.parse(JSON.stringify(response.data.shipping));
+  let pictureA = response.data.thumbnail.replace("/D_", "/D_NQ_NP_");
+  let picture = pictureA.replace("-I.jpg", "-O.jpg");
+
   let dataItem = {
     author: {
       name: "Jhonatan",
@@ -18,12 +21,13 @@ exports.itemMLibre = async function itemDataAxios(req, res) {
       id: response.data.id,
       title: response.data.title,
       price: {
-        currency: response.data.currency_id,
-        amount: response.data.amount,
+        currency: "response.data.currency_id",
+        amount: "response.data.price",
         decimals: "OJO",
       },
-      picture: response.data.thumbnail,
+      picture: picture,
       condition: response.data.condition,
+      sold_quantity: response.data.sold_quantity,
       free_shipping: free_shipping.free_shipping,
       sold_quantity: response.data.sold_quantity,
       description: responseDescr.data.plain_text,
